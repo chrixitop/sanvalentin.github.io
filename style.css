@@ -1,0 +1,276 @@
+/* reset css */
+
+* {
+  min-width: 0;
+  font: inherit;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+video,
+svg {
+  display: block;
+  height: auto;
+  max-width: 150%;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* styles */
+/* TODO: Cambiar la fuente
+
+* {
+  font-family: comic-sans;
+} */
+
+body {
+  background-color: #F2C4DC;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container-letter {
+  position: relative;
+}
+
+.cover {
+  position: absolute;
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+  border-top: 100px solid #96215F;
+  border-bottom: 100px solid transparent;
+
+  /*  */
+  transition: transform .75s;
+  transform-origin: top;
+}
+
+.paper {
+  position: absolute;
+  padding: 1.5rem;
+  line-height: 2rem;
+  right: 5px;
+  /*  */
+  z-index: -1;
+  background: white;
+  width: 390px;
+  height: 180px;
+
+  transition: all .75s;
+}
+
+.letter {
+  border-left: 200px solid #E99AC4;
+  border-right: 200px solid #E99AC4;
+  border-top: 100px solid transparent;
+  border-bottom: 100px solid #E070AC;
+}
+
+.options {
+  display: flex;
+  gap: 5rem;
+
+  & button {
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 3px;
+    background: #E99AC4;
+    padding: 0.5rem 1rem;
+    border: 3px solid #E070AC;
+    cursor: pointer;
+  }
+
+  & button:hover {
+    background: #430E2A;
+    color: white;
+  }
+}
+
+.open-cover {
+  transform: rotatex(150deg);
+}
+
+.open-paper {
+  animation: openPaper .9s forwards;
+}
+
+@keyframes openPaper {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -120px;
+  }
+}
+
+.close-paper {
+  animation: closePaper .9s forwards;
+}
+
+@keyframes closePaper {
+  0% {
+    top: -120px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+
+.heart {
+  display: none;
+  position: absolute;
+  top: 23%;
+  left: 45%;
+  margin: auto;
+  font-size: 5rem;
+
+  color: #C02A7A;
+
+  animation: crecer 5s forwards ;
+}
+
+@keyframes crecer {
+  0% {
+    scale: 1;
+    opacity: 0.5;
+  }
+  100% {
+    scale: 3;
+    opacity: 0;
+
+  }
+}audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-panel {
+  background-color: #F2C4DC;
+  color: #F2C4DC;
+}
+
+.audio {
+  margin: -150px 150px 35px 35px
+}
+.love {
+  width: 40px; height: 40px;
+  margin: -150px 150px 145px 145px
+  }
+.abrazo {
+  width: 40px; height: 40px;
+  margin: -375px 375px 150px 150px
+  }
+
+.abrazo {
+  animation: ease 5s forwards ;
+}
+
+/* Contenedor de rosas */
+.roses {
+    position: fixed; /* Fija las rosas en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Permite interactuar con el contenido debajo */
+    z-index: 9999; /* Asegura que las rosas estén encima del contenido */
+}
+
+/* Estilos para cada rosa */
+.rose {
+    position: absolute;
+    font-size: 32px; /* Tamaño de la rosa */
+    animation: fall linear infinite;
+    user-select: none; /* Evita que el texto sea seleccionable */
+}
+
+/* Animación para hacer caer las rosas */
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+/* Posiciones y tiempos de animación para cada rosa */
+.rose:nth-child(1) {
+    left: 5%;
+    animation-duration: 8s;
+    animation-delay: 0s;
+}
+
+.rose:nth-child(2) {
+    left: 15%;
+    animation-duration: 10s;
+    animation-delay: 2s;
+}
+
+.rose:nth-child(3) {
+    left: 25%;
+    animation-duration: 9s;
+    animation-delay: 1s;
+}
+
+.rose:nth-child(4) {
+    left: 35%;
+    animation-duration: 7s;
+    animation-delay: 3s;
+}
+
+.rose:nth-child(5) {
+    left: 45%;
+    animation-duration: 11s;
+    animation-delay: 0s;
+}
+
+.rose:nth-child(6) {
+    left: 55%;
+    animation-duration: 8s;
+    animation-delay: 2s;
+}
+
+.rose:nth-child(7) {
+    left: 65%;
+    animation-duration: 9s;
+    animation-delay: 1s;
+}
+
+.rose:nth-child(8) {
+    left: 75%;
+    animation-duration: 10s;
+    animation-delay: 3s;
+}
+
+.rose:nth-child(9) {
+    left: 85%;
+    animation-duration: 7s;
+    animation-delay: 0s;
+}
+
+.rose:nth-child(10) {
+    left: 95%;
+    animation-duration: 8s;
+    animation-delay: 2s;
+}
